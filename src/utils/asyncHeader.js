@@ -1,11 +1,11 @@
 
-const asyncHeadler = (requestHeandler) =>{
-(req,res,next)=>{
+const AsyncHeadler = (requestHeandler) =>{
+ return (req,res,next)=>{
     Promise.resolve(requestHeandler(req,res,next)).catch((error)=>next (error))
 }
 }
 
-export {asyncHeadler}
+export {AsyncHeadler}
 
 
 
